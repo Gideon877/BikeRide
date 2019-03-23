@@ -1,4 +1,6 @@
-package bicycles;
+package bicycles.interfaces;
+
+import bicycles.BicycleType;
 
 public interface Bicycle {
     void accelerate();

@@ -1,4 +1,7 @@
-package bicycles;
+package bicycles.rides;
+
+import bicycles.interfaces.Bicycle;
+import bicycles.BicycleType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +26,8 @@ public class FunRide {
     }
 
     public void accept(Bicycle bicycle) {
-        if(bicycles.size() < maxNumberOfBikes) {
+
+        if(bicycles.size() < maxNumberOfBikes && !bicycles.contains(bicycle)) {
             bicycles.add(bicycle);
         }
     }

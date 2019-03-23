@@ -1,5 +1,8 @@
 package bicycles;
 
+import bicycles.interfaces.Bicycle;
+import bicycles.spec.BicycleFromSpec;
+import bicycles.spec.BicycleSpecification;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -7,25 +10,35 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BicycleTest {
 
     @Test
-    public void shouldAccellerate() {
+    public void shouldBeAbleToAccelerate() {
 
-        BicycleSpecification tandemBike = new BicycleSpecification(12, -7, BicycleType.Tandem);
-        BicycleSpecification roadBike = new BicycleSpecification(11, -4, BicycleType.RoadBike);
-        BicycleSpecification mountainBike = new BicycleSpecification(5, -3, BicycleType.MountainBike);
+        BicycleSpecification roadBike = new BicycleSpecification(BicycleType.RoadBike);
+        Bicycle rBicycle = new BicycleFromSpec(roadBike);
+        rBicycle.accelerate();
 
-        assertEquals(tandemBike.getAccelerationSpeed(),12);
-        assertEquals(mountainBike.getAccelerationSpeed(),5);
-        assertEquals(roadBike.getAccelerationSpeed(),11);
+        assertEquals(rBicycle.currentSpeed(),11);
     }
 
     @Test
-    public void shouldBrake() {
-        BicycleSpecification tandemBike = new BicycleSpecification(12, -7, BicycleType.Tandem);
-        BicycleSpecification roadBike = new BicycleSpecification(11, -4, BicycleType.RoadBike);
-        BicycleSpecification mountainBike = new BicycleSpecification(5, -3, BicycleType.MountainBike);
+    public void shouldBeAbleToStop() {
+        BicycleSpecification mountainBike = new BicycleSpecification(BicycleType.MountainBike);
 
-        assertEquals(roadBike.getBrakeSpeed(),-4);
-        assertEquals(mountainBike.getBrakeSpeed(),-3);
-        assertEquals(tandemBike.getBrakeSpeed(),-7);
+        Bicycle mBicycle = new BicycleFromSpec(mountainBike);
+
+        mBicycle.accelerate();
+        mBicycle.stop();
+
+        assertEquals(mBicycle.currentSpeed(),0);
+    }
+
+
+    @Test
+    public void shouldBeAbleToBrake() {
+        BicycleSpecification tandemBike = new BicycleSpecification(BicycleType.Tandem);
+        Bicycle tBicycle = new BicycleFromSpec(tandemBike);
+
+        tBicycle.brake();
+
+        assertEquals(0, tBicycle.currentSpeed());
     }
 }

@@ -1,6 +1,8 @@
 package bicycles;
 
-public abstract class BicycleBase implements  Bicycle {
+import bicycles.interfaces.Bicycle;
+
+public abstract class BicycleBase implements Bicycle {
 
     protected int speed;
 
@@ -16,6 +18,9 @@ public abstract class BicycleBase implements  Bicycle {
 
     protected void changeSpeed(int speedChange) {
         speed += speedChange;
+        if(speed < 0) {
+            speed = 0;
+        }
     }
 
     public BicycleType bicycleType(BicycleType bicycleType) {
