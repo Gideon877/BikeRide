@@ -9,4 +9,6 @@ public interface Bicycle {
     void stop();
 
     BicycleType getBicycleType();
+
+    String getColor();
 }

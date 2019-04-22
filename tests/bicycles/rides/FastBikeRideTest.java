@@ -22,7 +22,7 @@ public class FastBikeRideTest {
         assertEquals(roadBikeSpec.getBrakeSpeed(), -4);
         assertEquals(roadBikeSpec.getBicycleType(), BicycleType.RoadBike);
 
-        assertEquals(bikeRide.currentSpeed(), 113);
+        assertEquals(bikeRide.currentSpeed(), 90);
     }
 
     @Test
@@ -32,14 +32,7 @@ public class FastBikeRideTest {
         BikeRide bikeRide = new FastBikeRide(mountainBike);
 
         bikeRide.ride();
-        assertEquals(bikeRide.currentSpeed(), 49);
-
-        for (int i = 0; i < 10; i++) {
-            mountainBike.brake();
-        }
-        assertEquals(bikeRide.currentSpeed(), 19);
-
-
+        assertEquals(bikeRide.currentSpeed(), 35);
     }
 
     @Test
@@ -49,7 +42,7 @@ public class FastBikeRideTest {
         BikeRide bikeRide = new FastBikeRide(tandemBike);
 
         bikeRide.ride();
-        assertEquals(bikeRide.currentSpeed(), 118);
+        assertEquals(bikeRide.currentSpeed(), 85);
     }
 
 

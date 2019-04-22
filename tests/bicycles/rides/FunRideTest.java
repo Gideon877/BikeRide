@@ -6,31 +6,37 @@ import bicycles.spec.BicycleSpecification;
 import bicycles.BicycleType;
 import org.junit.jupiter.api.Test;
 
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FunRideTest {
     @Test
-    public void shouldReturnEnteredBicyclesCount() {
+    public void shouldAcceptOnlyLimitedAmountOfBicycles() {
         BicycleSpecification roadBikeSpec = new BicycleSpecification( BicycleType.RoadBike);
         BicycleSpecification mountainBikeSpec = new BicycleSpecification( BicycleType.MountainBike);
 
         Bicycle bicycle1 = new BicycleFromSpec(roadBikeSpec);
         Bicycle bicycle2 = new BicycleFromSpec(mountainBikeSpec);
+        Bicycle bicycle3 = new BicycleFromSpec(roadBikeSpec);
+        Bicycle bicycle4 = new BicycleFromSpec(roadBikeSpec);
+        Bicycle bicycle5 = new BicycleFromSpec(mountainBikeSpec);
 
-        FunRide funRide = new FunRide(3);
+        FunRide funRide = new FunRide(4);
 
         funRide.accept(bicycle1);
         funRide.accept(bicycle2);
+        funRide.accept(bicycle3);
+        funRide.accept(bicycle4);
+        funRide.accept(bicycle5);
 
-        assertEquals(funRide.getEnteredCount(), 2);
+        assertEquals(funRide.getEnteredCount(), 4);
     }
 
     @Test
-    public void shouldAcceptOnlyLimitedAmountOfBicycles() {
+    public void shouldReturnEnteredBicyclesCount() {
         BicycleSpecification roadBikeSpec = new BicycleSpecification( BicycleType.RoadBike);
         BicycleSpecification mountainBikeSpec = new BicycleSpecification( BicycleType.MountainBike);
         BicycleSpecification tandemBikeSpec = new BicycleSpecification( BicycleType.Tandem);
-
 
         Bicycle bicycle1 = new BicycleFromSpec(roadBikeSpec);
         Bicycle bicycle2 = new BicycleFromSpec(mountainBikeSpec);

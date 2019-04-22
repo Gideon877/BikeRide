@@ -23,6 +23,10 @@ public abstract class BicycleBase implements Bicycle {
         }
     }
 
+    public String getColor() {
+        return getColor();
+    }
+
     public BicycleType bicycleType(BicycleType bicycleType) {
         return bicycleType;
     }

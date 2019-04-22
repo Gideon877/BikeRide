@@ -16,11 +16,8 @@ public class FastBikeRide implements BikeRide {
     public void ride() {
         for (int i = 0; i < 10; i++) {
             this.bicycle.accelerate();
-            if(i >= 8) {
+            if(i % 2 == 0) {
                 this.bicycle.brake();
-            }
-            if(i == 5) {
-                this.bicycle.accelerate();
             }
         }
     }

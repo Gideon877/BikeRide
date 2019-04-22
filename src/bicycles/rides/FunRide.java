@@ -32,6 +32,8 @@ public class FunRide {
         }
     }
 
+
+
     public int getEnteredCount() {
         return bicycles.size();
     }

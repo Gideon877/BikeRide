@@ -5,6 +5,7 @@ import bicycles.BicycleType;
 public class BicycleSpecification {
 
     private final BicycleType bicycleType;
+    private final String color;
     private int accelerationSpeed;
     private int brakeSpeed;
 
@@ -13,6 +14,7 @@ public class BicycleSpecification {
         this.accelerationSpeed = bicycleType.getAcceleration();
         this.brakeSpeed = bicycleType.getBrake();
         this.bicycleType = bicycleType;
+        this.color = bicycleType.getColor();
     }
 
     public int getBrakeSpeed() {
@@ -25,6 +27,10 @@ public class BicycleSpecification {
 
     public BicycleType getBicycleType(){
         return bicycleType;
+    }
+
+    public String getColor() {
+        return color;
     }
 
 }

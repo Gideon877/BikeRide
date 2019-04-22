@@ -16,7 +16,6 @@ public class SlowBikeRide implements BikeRide {
     public void ride() {
         for (int i = 0; i < 3; i++) {
             this.bicycle.accelerate();
-
             if(i >= 2) {
                 this.bicycle.brake();
             }

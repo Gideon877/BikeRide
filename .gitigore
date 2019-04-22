@@ -1,0 +1,5 @@
+out/
+.idea/
+.nyc_output
+coverage
+.DS_store

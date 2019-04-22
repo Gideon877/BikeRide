@@ -17,6 +17,9 @@ public class BicycleTest {
         rBicycle.accelerate();
 
         assertEquals(rBicycle.currentSpeed(),11);
+
+
+
     }
 
     @Test

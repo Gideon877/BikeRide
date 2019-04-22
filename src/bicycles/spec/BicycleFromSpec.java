@@ -24,4 +24,8 @@ public class BicycleFromSpec extends BicycleBase {
     public BicycleType getBicycleType() {
         return this.bicycleType(this.bicycleSpecification.getBicycleType());
     }
+
+    public String getColor() {
+        return this.bicycleSpecification.getColor();
+    }
 }
