@@ -9,7 +9,6 @@ public class BicycleSpecification {
     private int accelerationSpeed;
     private int brakeSpeed;
 
-
     public BicycleSpecification(BicycleType bicycleType) {
         this.accelerationSpeed = bicycleType.getAcceleration();
         this.brakeSpeed = bicycleType.getBrake();
