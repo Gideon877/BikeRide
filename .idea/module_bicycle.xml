@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_bicycle" default="compile.module.bicycle">
+  <dirname property="module.bicycle.basedir" file="${ant.file.module_bicycle}"/>
+  
+  <property name="module.jdk.home.bicycle" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.bicycle" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.bicycle" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.bicycle" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="bicycle.output.dir" value="${module.bicycle.basedir}/../out/production/Bicycle"/>
+  <property name="bicycle.testoutput.dir" value="${module.bicycle.basedir}/../out/test/Bicycle"/>
+  
+  <path id="bicycle.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="bicycle.module.production.classpath">
+    <path refid="${module.jdk.classpath.bicycle}"/>
+  </path>
+  
+  <path id="bicycle.runtime.production.module.classpath">
+    <pathelement location="${bicycle.output.dir}"/>
+  </path>
+  
+  <path id="bicycle.module.classpath">
+    <path refid="${module.jdk.classpath.bicycle}"/>
+    <pathelement location="${bicycle.output.dir}"/>
+    <pathelement location="${path.variable.maven_repository}/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar"/>
+    <pathelement location="${path.variable.maven_repository}/org/junit/jupiter/junit-jupiter-api/5.5.0-M1/junit-jupiter-api-5.5.0-M1.jar"/>
+    <pathelement location="${path.variable.maven_repository}/org/junit/platform/junit-platform-commons/1.5.0-M1/junit-platform-commons-1.5.0-M1.jar"/>
+    <pathelement location="${path.variable.maven_repository}/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar"/>
+  </path>
+  
+  <path id="bicycle.runtime.module.classpath">
+    <pathelement location="${bicycle.testoutput.dir}"/>
+    <pathelement location="${bicycle.output.dir}"/>
+    <pathelement location="${path.variable.maven_repository}/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar"/>
+    <pathelement location="${path.variable.maven_repository}/org/junit/jupiter/junit-jupiter-api/5.5.0-M1/junit-jupiter-api-5.5.0-M1.jar"/>
+    <pathelement location="${path.variable.maven_repository}/org/junit/platform/junit-platform-commons/1.5.0-M1/junit-platform-commons-1.5.0-M1.jar"/>
+    <pathelement location="${path.variable.maven_repository}/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.bicycle">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.bicycle">
+    <patternset refid="excluded.from.module.bicycle"/>
+  </patternset>
+  
+  <path id="bicycle.module.sourcepath">
+    <dirset dir="${module.bicycle.basedir}/../../Bicycle">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  <path id="bicycle.module.test.sourcepath">
+    <dirset dir="${module.bicycle.basedir}/../../Bicycle">
+      <include name="tests"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.bicycle" depends="compile.module.bicycle.production,compile.module.bicycle.tests" description="Compile module Bicycle"/>
+  
+  <target name="compile.module.bicycle.production" depends="register.custom.compilers" description="Compile module Bicycle; production classes">
+    <mkdir dir="${bicycle.output.dir}"/>
+    <javac2 destdir="${bicycle.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.bicycle}/javac">
+      <compilerarg line="${compiler.args.bicycle}"/>
+      <bootclasspath refid="bicycle.module.bootclasspath"/>
+      <classpath refid="bicycle.module.production.classpath"/>
+      <src refid="bicycle.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.bicycle"/>
+    </javac2>
+    
+    <copy todir="${bicycle.output.dir}">
+      <fileset dir="${module.bicycle.basedir}/../src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.bicycle.tests" depends="register.custom.compilers,compile.module.bicycle.production" description="compile module Bicycle; test classes" unless="skip.tests">
+    <mkdir dir="${bicycle.testoutput.dir}"/>
+    <javac2 destdir="${bicycle.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.bicycle}/javac">
+      <compilerarg line="${compiler.args.bicycle}"/>
+      <bootclasspath refid="bicycle.module.bootclasspath"/>
+      <classpath refid="bicycle.module.classpath"/>
+      <src refid="bicycle.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.bicycle"/>
+    </javac2>
+    
+    <copy todir="${bicycle.testoutput.dir}">
+      <fileset dir="${module.bicycle.basedir}/../tests">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.bicycle" description="cleanup module">
+    <delete dir="${bicycle.output.dir}"/>
+    <delete dir="${bicycle.testoutput.dir}"/>
+  </target>
+</project>
