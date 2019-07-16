@@ -27,6 +27,7 @@ public class FunRideTest {
         funRide.accept(bicycle2);
         funRide.accept(bicycle3);
         funRide.accept(bicycle4);
+
         funRide.accept(bicycle5);
 
         assertEquals(funRide.getEnteredCount(), 4);

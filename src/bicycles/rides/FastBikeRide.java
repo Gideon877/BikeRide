@@ -4,8 +4,6 @@ import bicycles.interfaces.Bicycle;
 import bicycles.interfaces.BikeRide;
 
 public class FastBikeRide implements BikeRide {
-
-
     private final Bicycle bicycle;
 
     public FastBikeRide(Bicycle bicycle) {
