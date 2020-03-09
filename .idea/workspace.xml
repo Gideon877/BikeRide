@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb7f95c3-8076-41e4-a8fd-bafdac71e969" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bicycle/bicycles/BicycleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bicycle/bicycles/BicycleType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bicycle/bicycles/rides/SlowBikeRide.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bicycle/bicycles/rides/SlowBikeRide.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Bicycle/bicycles/BicycleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Bicycle/bicycles/BicycleTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bicycles/BicycleBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bicycles/BicycleBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bicycles/BicycleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bicycles/BicycleType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bicycles/interfaces/Bicycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bicycles/interfaces/Bicycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bicycles/rides/SlowBikeRide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bicycles/rides/SlowBikeRide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bicycles/spec/BicycleFromSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bicycles/spec/BicycleFromSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/bicycles/BicycleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/bicycles/BicycleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/bicycles/rides/FunRideTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/bicycles/rides/FunRideTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,6 +22,13 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,6 +49,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -38,7 +57,12 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.bicycles in Bicycle">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="bicycles" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in Bicycle">
     <configuration name="All in Bicycle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bicycle" />
       <option name="PACKAGE_NAME" value="" />
@@ -47,7 +71,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BicycleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bicycle" />
       <extension name="coverage">
         <pattern>
@@ -56,13 +80,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="bicycles" />
-      <option name="MAIN_CLASS_NAME" value="bicycles.BicycleTest" />
+      <option name="MAIN_CLASS_NAME" value="bicycles.ArrayTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BicycleTest.shouldBeAbleToStop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArrayTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bicycle" />
       <extension name="coverage">
         <pattern>
@@ -71,14 +95,30 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="bicycles" />
-      <option name="MAIN_CLASS_NAME" value="bicycles.BicycleTest" />
-      <option name="METHOD_NAME" value="shouldBeAbleToStop" />
+      <option name="MAIN_CLASS_NAME" value="bicycles.ArrayTest" />
+      <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SlowBikeRideTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArrayTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bicycle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bicycles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bicycles" />
+      <option name="MAIN_CLASS_NAME" value="bicycles.ArrayTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FunRideTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bicycle" />
       <extension name="coverage">
         <pattern>
@@ -87,33 +127,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="bicycles.rides" />
-      <option name="MAIN_CLASS_NAME" value="bicycles.rides.SlowBikeRideTest" />
+      <option name="MAIN_CLASS_NAME" value="bicycles.rides.FunRideTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="bicycles in Bicycle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bicycle" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bicycles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bicycles" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.bicycles in Bicycle" />
-        <item itemvalue="JUnit.SlowBikeRideTest" />
         <item itemvalue="JUnit.All in Bicycle" />
-        <item itemvalue="JUnit.BicycleTest.shouldBeAbleToStop" />
-        <item itemvalue="JUnit.BicycleTest" />
+        <item itemvalue="JUnit.FunRideTest" />
+        <item itemvalue="JUnit.ArrayTest" />
+        <item itemvalue="JUnit.ArrayTest.test1" />
+        <item itemvalue="JUnit.ArrayTest.test2" />
       </list>
     </recent_temporary>
   </component>
@@ -156,26 +182,50 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="648" y="341" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581346641835">
+    <state x="560" y="265" key="#Java" timestamp="1582553024796">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="648" y="341" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1581346641835" />
-    <state width="1876" height="343" key="GridCell.Tab.0.bottom" timestamp="1581092923805">
+    <state x="560" y="265" key="#Java/0.0.1920.1200@0.0.1920.1200" timestamp="1582553024796" />
+    <state x="648" y="341" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1582540020603">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1876" height="343" key="GridCell.Tab.0.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1581092923805" />
-    <state width="1876" height="343" key="GridCell.Tab.0.center" timestamp="1581092923804">
+    <state x="648" y="341" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1200@0.0.1920.1200" timestamp="1582540020603" />
+    <state width="1876" height="342" key="GridCell.Tab.0.bottom" timestamp="1583764907680">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1876" height="343" key="GridCell.Tab.0.center/0.0.1920.1200@0.0.1920.1200" timestamp="1581092923804" />
-    <state width="1876" height="343" key="GridCell.Tab.0.left" timestamp="1581092923803">
+    <state width="1876" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1583764907680" />
+    <state width="1876" height="342" key="GridCell.Tab.0.center" timestamp="1583764907679">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1876" height="343" key="GridCell.Tab.0.left/0.0.1920.1200@0.0.1920.1200" timestamp="1581092923803" />
-    <state width="1876" height="343" key="GridCell.Tab.0.right" timestamp="1581092923804">
+    <state width="1876" height="342" key="GridCell.Tab.0.center/0.0.1920.1200@0.0.1920.1200" timestamp="1583764907679" />
+    <state width="1876" height="342" key="GridCell.Tab.0.left" timestamp="1583764907679">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1876" height="343" key="GridCell.Tab.0.right/0.0.1920.1200@0.0.1920.1200" timestamp="1581092923804" />
+    <state width="1876" height="342" key="GridCell.Tab.0.left/0.0.1920.1200@0.0.1920.1200" timestamp="1583764907679" />
+    <state width="1876" height="342" key="GridCell.Tab.0.right" timestamp="1583764907680">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1876" height="342" key="GridCell.Tab.0.right/0.0.1920.1200@0.0.1920.1200" timestamp="1583764907680" />
+    <state width="1876" height="423" key="GridCell.Tab.1.bottom" timestamp="1582555367843">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1876" height="423" key="GridCell.Tab.1.bottom/0.0.1920.1200@0.0.1920.1200" timestamp="1582555367843" />
+    <state width="1876" height="423" key="GridCell.Tab.1.center" timestamp="1582555367842">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1876" height="423" key="GridCell.Tab.1.center/0.0.1920.1200@0.0.1920.1200" timestamp="1582555367842" />
+    <state width="1876" height="423" key="GridCell.Tab.1.left" timestamp="1582555367842">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1876" height="423" key="GridCell.Tab.1.left/0.0.1920.1200@0.0.1920.1200" timestamp="1582555367842" />
+    <state width="1876" height="423" key="GridCell.Tab.1.right" timestamp="1582555367842">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1876" height="423" key="GridCell.Tab.1.right/0.0.1920.1200@0.0.1920.1200" timestamp="1582555367842" />
+    <state x="708" y="524" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583328448055">
+      <screen x="0" y="23" width="1920" height="1130" />
+    </state>
+    <state x="708" y="524" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.1130@0.23.1920.1130" timestamp="1583328448055" />
   </component>
   <component name="masterDetails">
     <states>

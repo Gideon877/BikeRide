@@ -22,7 +22,7 @@ public class BicycleFromSpec extends BicycleBase {
 
     @Override
     public BicycleType getBicycleType() {
-        return this.bicycleType(this.bicycleSpecification.getBicycleType());
+        return this.bicycleSpecification.getBicycleType();
     }
 
     public String getColor() {

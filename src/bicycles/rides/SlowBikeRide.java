@@ -20,7 +20,6 @@ public class SlowBikeRide implements BikeRide {
                 this.bicycle.brake();
             }
         }
-
     }
 
     public int currentSpeed() {

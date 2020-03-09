@@ -17,20 +17,16 @@ public class BicycleTest {
         rBicycle.accelerate();
 
         assertEquals(rBicycle.currentSpeed(),11);
-
-
-
     }
 
     @Test
     public void shouldBeAbleToStop() {
         BicycleSpecification mountainBike = new BicycleSpecification(BicycleType.MountainBike);
-
         Bicycle mBicycle = new BicycleFromSpec(mountainBike);
 
         mBicycle.accelerate();
+        assertEquals(mBicycle.currentSpeed(),5);
         mBicycle.stop();
-
         assertEquals(mBicycle.currentSpeed(),0);
     }
 
@@ -39,9 +35,9 @@ public class BicycleTest {
     public void shouldBeAbleToBrake() {
         BicycleSpecification tandemBike = new BicycleSpecification(BicycleType.Tandem);
         Bicycle tBicycle = new BicycleFromSpec(tandemBike);
-
+        tBicycle.accelerate();
+        assertEquals(12, tBicycle.currentSpeed());
         tBicycle.brake();
-
-        assertEquals(0, tBicycle.currentSpeed());
+        assertEquals(5, tBicycle.currentSpeed());
     }
 }

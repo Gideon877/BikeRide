@@ -3,7 +3,7 @@ package bicycles.rides;
 import bicycles.interfaces.Bicycle;
 import bicycles.spec.BicycleFromSpec;
 import bicycles.spec.BicycleSpecification;
-import bicycles.BicycleType;
+import static bicycles.BicycleType.*;
 import org.junit.jupiter.api.Test;
 
 
@@ -12,8 +12,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FunRideTest {
     @Test
     public void shouldAcceptOnlyLimitedAmountOfBicycles() {
-        BicycleSpecification roadBikeSpec = new BicycleSpecification( BicycleType.RoadBike);
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification( BicycleType.MountainBike);
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(RoadBike);
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(MountainBike);
 
         Bicycle bicycle1 = new BicycleFromSpec(roadBikeSpec);
         Bicycle bicycle2 = new BicycleFromSpec(mountainBikeSpec);
@@ -35,9 +35,9 @@ public class FunRideTest {
 
     @Test
     public void shouldReturnEnteredBicyclesCount() {
-        BicycleSpecification roadBikeSpec = new BicycleSpecification( BicycleType.RoadBike);
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification( BicycleType.MountainBike);
-        BicycleSpecification tandemBikeSpec = new BicycleSpecification( BicycleType.Tandem);
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(RoadBike);
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(MountainBike);
+        BicycleSpecification tandemBikeSpec = new BicycleSpecification(Tandem);
 
         Bicycle bicycle1 = new BicycleFromSpec(roadBikeSpec);
         Bicycle bicycle2 = new BicycleFromSpec(mountainBikeSpec);
@@ -56,8 +56,8 @@ public class FunRideTest {
 
     @Test
     public void shouldReturnBicycleCountByType() {
-        BicycleSpecification roadBikeSpec = new BicycleSpecification( BicycleType.RoadBike);
-        BicycleSpecification tandemBikeSpec = new BicycleSpecification( BicycleType.Tandem);
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(RoadBike);
+        BicycleSpecification tandemBikeSpec = new BicycleSpecification(Tandem);
 
         Bicycle bicycle1 = new BicycleFromSpec(roadBikeSpec);
         Bicycle bicycle2 = new BicycleFromSpec(tandemBikeSpec);
@@ -69,6 +69,6 @@ public class FunRideTest {
         funRide.accept(bicycle2);
         funRide.accept(bicycle3);
 
-        assertEquals(funRide.getCountForType(BicycleType.RoadBike), 2);
+        assertEquals(funRide.getCountForType(RoadBike), 2);
     }
 }

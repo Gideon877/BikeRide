@@ -9,8 +9,8 @@ public enum BicycleType {
     private final int brake;
     private final String color;
 
-    BicycleType(int acceleration, int brake, String color) {
-        this.acceleration = acceleration;
+    BicycleType(int accelerations, int brake, String color) {
+        this.acceleration = accelerations;
         this.brake = brake;
         this.color = color;
     }

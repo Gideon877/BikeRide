@@ -5,6 +5,7 @@ import bicycles.interfaces.Bicycle;
 public abstract class BicycleBase implements Bicycle {
 
     protected int speed;
+    protected BicycleType bicycleType;
 
     @Override
     public int currentSpeed() {
@@ -27,7 +28,7 @@ public abstract class BicycleBase implements Bicycle {
         return getColor();
     }
 
-    public BicycleType bicycleType(BicycleType bicycleType) {
+    public BicycleType getBicycleType() {
         return bicycleType;
     }
 

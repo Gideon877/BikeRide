@@ -33,9 +33,6 @@ public class SlowBikeRideTest {
 
        bikeRide.ride();
        assertEquals(bikeRide.currentSpeed(), 12);
-
-
-
    }
 
    @Test
